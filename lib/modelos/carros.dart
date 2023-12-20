@@ -1,7 +1,7 @@
 class Carro {
-  String? nome;
-  int? ano;
-  List<String>? acessorio;
+  String nome;
+  int ano;
+  List<String> acessorio;
 
-  Carro({this.nome, this.ano, this.acessorio});
+  Carro({required this.nome, required this.ano, required this.acessorio});
 }
