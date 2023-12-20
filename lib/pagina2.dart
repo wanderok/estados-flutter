@@ -43,6 +43,13 @@ class Pagina2Page extends StatelessWidget {
             MaterialButton(
               color: const Color.fromARGB(255, 21, 88, 143),
               onPressed: () {
+                if (!carroService.existeCarro) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Carro não registrado'),
+                    ),
+                  );
+                }
                 carroService.adicionarAcessorio('AC');
                 carroService.adicionarAcessorio('DH');
                 carroService.adicionarAcessorio('LL');
